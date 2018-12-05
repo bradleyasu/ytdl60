@@ -1,0 +1,207 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+}
+
+.app {
+  /* Disable text selection, or your app will feel like a web page */
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+
+  /* Cover the whole window */
+
+
+  /* Make sure this matches the native window background color that you pass to
+   * electron.BrowserWindow({...}), otherwise your app startup will look janky. */
+  background: #efefef;
+
+  /* Smoother startup */
+  animation: fadein 1s;
+  height: 100%;
+
+}
+
+#controlbar {
+  width: 100%;
+  height: 110px;
+  /* border-bottom: 1px solid #dadada; */
+  padding: 30px;
+  text-align:center;
+  background: #efefef;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  
+}
+
+.controlbarStart{
+  padding-top: 250px !important;
+}
+
+#notifyMessage{
+  padding: 100px;text-align:left;
+}
+
+#urlInputControl{
+  display:inline-block;
+  background: #fefefe;
+  border: 1px solid #e0e0e0;
+  box-shadow:0px 1px 1px #ababab;
+  color: #242424;
+  width: 80%;
+  text-align:left;
+}
+
+#urlInput {
+  width: 80%;
+  height: 45px;
+  border-radius: 2px;
+  outline: none;
+  outline-width: 0px;
+  padding: 10px;
+  color: #242424;
+  background-color: #fefefe;
+  border:none;
+}
+
+#controlBarElements {
+  width: 18%;
+  display:inline-block;
+  text-align:right;
+}
+
+#downloadsContainer {
+  width: 100%;
+  height: 400px;
+  overflow-y:auto;
+  overflow-x: hidden;
+  padding: 10px;
+  text-align:center;
+}
+
+#footer {
+  width: 100%;
+  height: 24px;
+  z-index: 100;
+  border-top: 1px solid #e0e0e0;
+}
+
+#footerLeft{
+  display:inline-block;
+  width: 49%;
+  text-align:left;
+  padding-left: 4px;
+  margin-right: 4px;
+}
+#footerRight {
+  display:inline-block;
+  width: 50%;
+  text-align:right;
+}
+
+.footerBtn{
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  background: none;
+  border:none;
+  outline: none;
+  outline-width: 0px;
+  border-left: 1px solid #e0e0e0;
+}
+
+.footerBtn:hover{
+  color: #f000a0;
+}
+
+.controlBarElement {
+  border: none;
+  background: none;
+  padding: 2px;
+  cursor: pointer;
+  outline: none;
+  outline-width: 0px;
+}
+
+.controlBarElement:hover {
+  color: #f000a0;
+}
+
+#videoPlayer {
+  text-align:center;
+}
+
+.downloadItem {
+  width: 200px;
+  height: 140px;
+  display:inline-block;
+  margin: 5px !important;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow:0px 2px 2px #ababab;
+  border-radius: 4px;
+  padding:0px;
+}
+
+.downloadItemThumbnail{
+  width: 200px;
+  height: 140px;
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+  border-radius: 4px;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+
+/* Terminal CSS */
+
+#terminal{
+  position: absolute;
+  z-index:1000;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  font-family:"courier";
+  background-color: #3d3d3d;
+  color: #fafafa;
+  padding: 4px;
+  overflow:auto;
+  overflow-y:scroll;
+  opacity: 0;
+}
+
+.commandPrompt{
+  color: #3ae374;
+}
+#commandLineInput{
+  width: 80%;
+  border:none;
+  outline:none;
+  outline-width:none;
+  font-family:"courier";
+  padding: 2px;
+  background-color:#3d3d3d;
+  color: #fafafa;
+}
+
+/* End terminal CSS */
+
+/* General Global Classes */
+
+.clickable{
+  cursor:pointer;
+}

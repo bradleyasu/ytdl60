@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Youtube Downloader 6.0.0 - Hexotic Software</title>
+
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/global.css">
+    <link rel="stylesheet" type="text/css" href="styles/libraries/jquery.ui.css">
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+
+    <script src="scripts/libraries/jquery.js"></script>
+    <script src="scripts/libraries/jquery.ui.js"></script>
+    <script src="scripts/primary.js"></script>
+    <script src="scripts/downloader.js"></script>
+    <script src="scripts/terminal.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+
+    <!-- Include javascript classes -->
+    <script src="scripts/classes/utilities.js"></script>
+    <script src="scripts/classes/downloadItem.js"></script>
+
+
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+  </head>
+  <body>
+    <div class="app">
+      <div id="controlbar" class="controlbarStart">
+        <div id="urlInputControl">
+          <input type="text" id="urlInput" placeholder="Paste a URL here and hit ENTER to download"/>
+          <div id="controlBarElements">
+            <button class="controlBarElement" id="downloadStateToggle" data-tooltip="Audio/Video Toggle" data-inverted="" data-position="bottom right"><i id="downloadStateIcon" class="music icon"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="downloadsContainer">
+
+        <div id="notifyMessage">
+          <div class="ui icon inverted pink message">
+            <i class="cogs icon"></i>
+            <div class="content">
+              <div class="header">
+                Welcome to the new YouTube Downloader!
+              </div>
+              <p>
+                Use the cog wheel below to set your default audio/video download settings.  Then, in the bar above, click the 
+                icon to quickly toggle between those two configurations.
+              </p>
+            </div>
+          </div>
+        </div>
+          
+      </div>
+
+      <div id="footer">
+        <div id="footerLeft">
+            <span style="color:#848484;font-size:10px;" id="footerInfoBar">
+              <i class="cloud download icon"></i> <span id="totalPercentInfo">--</span>%
+              <span id="failedStats">
+                 | <i class="smile outline icon"></i> <span id="totalSuccessPercentInfo">--</span>%
+                 | <i class="frown outline icon"></i> <span id="totalFailPercentInfo">--</span>%</span>
+            </span>
+        </div>
+        <div id="footerRight">
+          <button id="terminalBtn" class="footerBtn" onclick='showTerminal(true)'><i class="terminal icon"></i></button>
+          <button id="loveBtn" class="footerBtn"><i class="heart icon"></i></button>
+          <button id="configBtn" class="footerBtn" onclick='showGlobalConfigs()'><i class="cog icon"></i></button>
+        </div>
+      </div>
+    </div>
+
+
+    <!--
+      Video Preview Player
+    -->
+    <div class="ui basic modal" id="videoPlayer">
+        <video width="100%" controls id="videoPlayerElement">
+          <source src="" id="videoSource" />
+        </video>
+    </div>
+
+    <!--
+      Global Configurations
+    -->
+    <div class="ui tiny modal" id="globalConfigs">
+        <!-- <div class="header">Configurations</div> -->
+        <div class="content" style="height: 400px;">
+          
+            <div class="ui pointing secondary tabular menu">
+                <div class="item active  clickable" data-tab="tab-name">General</div>
+                <div class="item clickable" data-tab="audio-configs">Audio Settings</div>
+                <div class="item clickable" data-tab="video-configs">Video Settings</div>
+                <div class="item clickable" data-tab="tab-name2">Proxy</div>
+              </div>
+              <div class="ui tab active" data-tab="tab-name">
+                General Stuff
+              </div>
+              <div class="ui tab" data-tab="audio-configs">
+                audio stuff
+              </div>
+              <div class="ui tab" data-tab="video-configs">
+                video configs
+              </div>
+              <div class="ui tab" data-tab="tab-name2">
+                Proxy Stuff
+              </div>
+
+        </div>
+
+        <div class="actions">
+          <div class="ui cancel  button">nevermind</div>
+          <div class="ui approve pink button">save changes</div>
+        </div>
+    </div>
+
+    <!--
+      Terminal Controls
+    -->
+    <div id="terminal">
+      <div class="commandLine">
+        <span class="commandPrompt">Command Line Access - The F1 key will toggle terminal at any time.</span> 
+      </div>
+      <div class="commandLine">
+        <span class="commandPrompt">Type 'exit' to close terminal.  Type 'help' for more information.</span> 
+      </div>
+      <div class="commandLine">
+        <span class="commandPrompt">$</span> 
+        <input id="commandLineInput"/>
+      </div>
+    </div>
+
+  </body>
+</html>
