@@ -151,7 +151,6 @@ function queryApi(blogName, level, offset) {
         for(index in posts){
             var post = posts[index];
             // download("https://"+blogName+".tumblr.com/post/"+post.id);
-            // gaycumandfun - thelodginghouse
             var item = download(post.video_url);
             item.thumbnail = post.thumbnail_url;
             //queryApi(post.source_title, level++);
