@@ -38,7 +38,7 @@
       </div>
 
       <div id="downloadsContainer">
-
+<!--
         <div id="notifyMessage">
           <div class="ui icon inverted pink message">
             <i class="cogs icon"></i>
@@ -53,7 +53,7 @@
             </div>
           </div>
         </div>
-          
+      -->       
       </div>
 
       <div id="footer">
@@ -97,10 +97,84 @@
                 <div class="item clickable" data-tab="tab-name2">Proxy</div>
               </div>
               <div class="ui tab active" data-tab="tab-name">
-                General Stuff
+                <div style="height: 300px; overflow-y:auto;">
+                <div class="configurationOption">
+                  <div class="configurationOptionHeader">
+                    Youtube Playlist Links
+                  </div>
+                  <div>
+                    <span style="font-size: 12px;">
+                      Playlist links will automatically be detected.  This option, if enabled, will automatically download 
+                      every link found in a playlist.  If disabled, you will be prompted to individually select which items in the playlist to download.</span>
+                  </div>
+                  <div class="checkboxContainer">
+                    <div class="ui toggle checkbox">
+                      <input type="checkbox">
+                      <label>Automatically Download All</label>
+                    </div>
+                  </div>
+
+                  </div>
+                  <!-- YOUTUBE DL Update config -->
+                  <div class="configurationOption">
+                    <div class="configurationOptionHeader">
+                      Updating youtube-dl
+                    </div>
+                    <div>
+                      <span style="font-size: 12px;">
+                        It is important to keep the youtube-dl backend up to date.  It is recommended that this option is enabled.  If
+                         disabled, you will have to update the backend manually every time!
+                      </span>
+                    </div>
+                    
+                    <div class="checkboxContainer">
+                      <div class="ui toggle checkbox">
+                        <input type="checkbox">
+                        <label>Automatically update on program start</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END YOUTUBE DL Update config -->
+                  <!-- Toast notify config -->
+                  <div class="configurationOption">
+                    <div class="configurationOptionHeader">
+                      Toast Notification
+                    </div>
+                    <div>
+                      <span style="font-size: 12px;">
+                        This is an OS toast notification to alert you when all downloads have finished.  Useful if you have the application
+                        minimized or are using another application.
+                      </span>
+                    </div>
+                    
+                    <div class="checkboxContainer">
+                      <div class="ui toggle checkbox">
+                        <input type="checkbox">
+                        <label>Show toast notifications</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Toast notify config -->
+              </div>
               </div>
               <div class="ui tab" data-tab="audio-configs">
-                audio stuff
+                <!-- Download Location Configuration -->
+                <div class="configurationOption">
+                  <div class="configurationOptionHeader">
+                    Download Location
+                  </div>
+                  <div class="ui icon input">
+                    <input type="text" placeholder="Desktop" disabled="disabled">
+                    <i class="circular ellipsis vertical link icon"></i>
+                  </div>
+                  <div class="checkboxContainer">
+                    <div class="ui toggle checkbox">
+                      <input type="checkbox">
+                      <label>Prompt for save location for each download</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- END Download Location Configuration -->
               </div>
               <div class="ui tab" data-tab="video-configs">
                 video configs

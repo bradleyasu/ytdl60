@@ -4,7 +4,7 @@ class Util {
     }
 
     static randHash(length) {
-        var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('');
+        var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwxyz'.split('');
 
         if (! length) {
             length = Math.floor(Math.random() * chars.length);

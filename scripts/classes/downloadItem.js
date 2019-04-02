@@ -134,7 +134,8 @@ class DownloadItem {
             command: "youtube-dl",
             //args: ["-o", "c:\\users\\bradl_x1hnbb2\\Desktop\\ytdls\\%(title)s.%(ext)s" , "-f", "best", this.downloadUrl]
             //--extract-audio --audio-format mp3
-            args: ["-o", "c:\\users\\bradl_x1hnbb2\\Desktop\\ytdls\\%(title)s.%(ext)s" , "-f", "best", "--extract-audio", "--audio-format", "mp3", this.downloadUrl]
+            //args: ["-o", "c:\\users\\bradl_x1hnbb2\\Desktop\\ytdls\\%(title)s.%(ext)s" , "-f", "best", "--extract-audio", "--audio-format", "mp3", this.downloadUrl]
+            args: ["-o", "c:\\users\\bradl_x1hnbb2\\Desktop\\ytdls\\%(title)s.%(ext)s" , "-f", "best",  this.downloadUrl]
         });
         // ipcRenderer.sendSync('ytdl',{
             // hash: this.id,
